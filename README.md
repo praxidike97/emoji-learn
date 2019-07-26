@@ -1,6 +1,6 @@
 # emoji-learn
 
-## Whats is emoji-learn? 🤔
+## What is emoji-learn? 🤔
 
 emoji-learns is a simple library to create neural networks - in [Emojicode](https://www.emojicode.org)!  
 How can this not be awesome??
@@ -15,7 +15,7 @@ So...how does machine learning in Emojicode actually look like?? Here are some s
 
 ![Screenshot 2](images/screenshot02.png)
 
-Yeah, it really is someting.
+Yeah, it really is something.
 
 ## Prerequisites 📝
 Emojicode version 0.9+ is required. Go [here](https://github.com/emojicode/emojicode) to find out how to install it.  
@@ -37,7 +37,7 @@ emojicodec -p emoji-learn -S /path/to/GitRepo/emoji-learn/packages emoji-learn.e
 ## Documentation 🤓
 
 ## numlol 💯
-Machine learning and especially neural nets rely heavily on the use of linear algebra (LinAlg) - we need to add, substract and multiply matrices and vectors. Unfortunately, the only data structure available in the standard Emojicode package that comes close to what we need are lists. 
+Machine learning and especially neural nets rely heavily on the use of linear algebra (LinAlg) - we need to add, subtract and multiply matrices and vectors. Unfortunately, the only data structure available in the standard Emojicode package that comes close to what we need are lists. 
 
 ```
 💭 A list of integers
@@ -61,7 +61,7 @@ Creating a new numlol array is as simple as one-two-three, just hand over an emb
 ```
 
 In the numlol package all kind of matrix and vector operations are implemented:
-(Note: most methods are implementes as static methods so that the method name itself is followed by 🐇🍎)  
+(Note: most methods are implemented as static methods so that the method name itself is followed by 🐇🍎)  
 
 Want to add two vectors? No problem!
 
@@ -74,10 +74,10 @@ You suddenly need to transpose a matrix? Here you go!
 
 ```
 💭 Transpose array
-🍔🐇🍎 array0❗➡️ transposed_array
+🍔🐇🍎 array❗➡️ transposed_array
 ```
 
-It is neccesary to perform a matrix-matrix/matrix-vector multiplication? Sure!
+It is necessary to perform a matrix-matrix/matrix-vector multiplication? Sure!
 ```
 💭 Do matrix-matrix/matrix-vector multiplication
 🥐🐇🍎 array01 array02❗➡️ multiplied_array
@@ -91,7 +91,7 @@ It is also easy to print arrays to the console.
 💭 Print array to console
 📠 array❗
 ```
-This will produce an ouput similar to the following
+This will produce an output similar to the following
 
 ![Screenshot 4](images/screenshot04.png)
 
@@ -102,7 +102,7 @@ First of all we need data. A lot of it. At the moment the only way to get data i
 
 ![Screenshot 3](images/screenshot03.png)
 
-Then this file content can be transfered into a numlol array with just one method call
+Then this file content can be transferred into a numlol array with just one method call
 
 ```
 💭 Read .csv file into numlol array
@@ -122,7 +122,7 @@ You don't have any datasets you can try out? No problem, we got you! There are a
 💭 Read the sonar dataset into a numlol array
 🚢🐇🕸 ❗ ➡️ data
 ```
-Unfortunately an Emojicode method cannot return multiple values. Therefore 'data' is a value type that holds the features ans the labels. There are two methods to access them both.
+Unfortunately an Emojicode method cannot return multiple values. Therefore 'data' is a value type that holds the features and the labels. There are two methods to access them both.
 
 ```
 💭 Access features and labels from the 'data' value type
