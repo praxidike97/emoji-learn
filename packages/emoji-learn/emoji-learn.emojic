@@ -1,0 +1,315 @@
+
+📦 numlol 🏠
+
+💭 Class for neural nets
+💭 Code for reference: https://github.com/pangolulu/neural-network-from-scratch
+🌍 🐇 🕸 🍇
+
+   💭 The weights of the different layers
+   🖍🆕 W 🍨🐚🍎🍆
+
+   💭 The biases of the different layers
+   🖍🆕 b 🍨🐚🍎🍆
+
+   💭 The dimensions of the various layers
+   🖍🆕 layers_dim 🍨🐚🔢🍆
+
+   🆕 🍼 layers_dim 🍨🐚🔢🍆 🍇
+      💭 Create empty lists for weights/biases
+      🆕🍨🐚🍎🍆🐸❗️ ➡️🖍 W
+      🆕🍨🐚🍎🍆🐸❗️ ➡️🖍 b
+      💭 Iterate over all layers and create random weights/biases
+      🆕 ⏩⏩ 0 🐔layers_dim❗➖1 ❗ ➡️  range_layers
+      🔂 i 🍡 range_layers❗️🍇
+         💭 Create weights for layer
+         🔮 🐇🍎 🐽 layers_dim i❗ 🐽 layers_dim i➕ 1❗ -1.0 1.0❗ ➡️ random_W
+         💭 He initialisation
+         1.0 ➗ ⛷ 💯 🐽 layers_dim i❗❗❗ ➡️ he_factor
+         🐻 W 🥝 🐇🍎 random_W he_factor❗❗
+
+         💭 Create biases for layers
+         🔮 🐇🍎 1 🐽 layers_dim i➕1❗  -1.0 1.0❗ ➡️ random_b
+         🐻 b random_b❗
+      🍉
+   🍉
+
+    💭 Calculate loss ("Is this loss?")
+   ❗🦖 X🍎 y🍎 ➡️ 🍎 🍇
+      🆕 ⏩⏩ 0 🐔 W❗ ❗ ➡️  range_W
+      X ➡️🖍 🆕 input
+      💭🍔🐇🍎 input❗ ➡️🖍 input
+      🔂 i 🍡 range_W❗️🍇
+         💭🥐🐇🍎 input🐽 W i❗❗ ➡️ test
+         🍋🐇🍎 🥐🐇🍎 input 🐽 W i❗❗ 🐽 b i❗❗ ➡️ raw_output
+         📸🐇🍎 raw_output❗ ➡️ 🖍input
+      🍉
+      ↩️ 🍔🐇🍎 👬🐇🍎 input y❗❗
+   🍉
+
+   💭 Make prediction
+   ❗🦕 X🍎 ➡️ 🍎 🍇
+      🆕 ⏩⏩ 0 🐔 W❗ ❗ ➡️  range_W
+      X ➡️🖍 🆕 input
+      💭🍔🐇🍎 input❗ ➡️🖍 input
+      🔂 i 🍡 range_W❗️🍇
+         🍋🐇🍎 🥐🐇🍎 input 🐽 W i❗❗ 🐽 b i❗❗ ➡️ raw_output
+         📸🐇🍎 raw_output❗ ➡️ 🖍input
+      🍉
+      ↩️ 🍔🐇🍎 input❗
+   🍉
+
+   💭 Calculate accuracy of prediction
+   ❗ 🦍 X_test🍎 y_test🍎 ➡️ 💯🍇
+       0 ➡️🖍 🆕 num_right_samples
+
+       🔂 i 🆕 ⏩⏩ 0 🐔🍏X_test❗❗❗🍇
+
+          💭 Make prediction for i-th sample
+          🦕🐕 🥫🐇🍎X_test i❗❗ ➡️ prediction
+
+          🐽 🍏🥫🐇🍎y_test i❗❗0❗ ➡️ y_test_list
+          🐽 🍏 🍔🐇🍎prediction❗❗ 0❗ ➡️ prediction_list
+
+          ↪️ 🐶🐇🍎prediction_list❗ 🙌 🐶🐇🍎y_test_list❗🍇
+             num_right_samples ➕ 1 ➡️🖍 num_right_samples
+          🍉
+       🍉
+       💭😀 🔤Test03🔤❗
+       ↩️ 💯 num_right_samples❗ ➗ 💯 🐔🍏X_test❗❗❗
+   🍉
+
+   💭 Train the net
+   ❗🦄 X🍎 y🍎 epochs🔢 learning_rate💯 🍇
+      🍏 X❗ ➡️ X_array
+      🍏 y❗ ➡️ y_array
+      🆕🍎🆕🍨🐽 X_array 0❗🍆❗ ➡️🖍 🆕 input
+
+      🆕🍨🐚🦂🍆🐸❗️ ➡️🖍 🆕forward_values
+
+      🆕 ⏩⏩ 0 epochs❗ ➡️  num_epochs
+      🆕 ⏩⏩ 0 🐔 X_array❗❗ ➡️  num_samples
+      🆕 ⏩⏩ 0 🐔 W❗❗ ➡️  range_W
+
+      🔂 e 🍡 num_epochs❗️🍇
+         😀 🍪 🔤Epoche 🔤 🔡e 10❗🍪❗
+
+         💭 Iterate over all samples
+         🔂 num_sample 🍡 num_samples❗️🍇
+           🆕🍎🆕🍨🐽 X_array num_sample❗🍆❗ ➡️🖍 input
+           💭🍔🐇🍎 input❗ ➡️🖍 input
+
+           🆕🍨🐚🦂🍆🐸❗️ ➡️🖍 forward_values
+
+           🐻 forward_values 🆕🦂🆕 🍞🐇🍎 1 1❗ 🍞🐇🍎 1 1❗ input❗❗
+
+           🔂 i 🍡 range_W❗️🍇
+              🥐🐇🍎 input 🐽 W i❗❗ ➡️ mul
+              🍋🐇🍎 mul 🐽 b i❗❗ ➡️ add
+              📸🐇🍎 add❗ ➡️ 🖍input
+
+              🐻 forward_values 🆕🦂🆕 mul add input❗️❗️
+           🍉
+
+           💭 Calculate derivative of MSE
+           👭🐇🍎 🦎🐽 forward_values 🐔forward_values❗➖1❗❗🆕🍎🆕🍨🐽 y_array num_sample❗🍆❗❗ ➡️ 🖍 🆕dmse
+
+
+           🆕 ⏩⏩ 0 🐔layers_dim❗ ❗ ➡️  layers
+
+           💭 Transform range to list and reverse
+           🆕🍨🐚🔢🍆🐸❗️ ➡️🖍 🆕layers_list
+           🔂 i 🍡 layers❗️🍇
+              🐻 layers_list i❗
+           🍉
+
+           🐨 layers_list 0❗
+           🐮🐇🍎 layers_list❗ ➡️ layers_reversed
+
+           🔂 layer 🍡 layers_reversed❗️🍇
+              💭 Derivative of activation function
+              🍐📷🐇🍎 dmse❗❗➡️ dmse_array_shape
+
+              🍐 🐍🐽 forward_values layer❗❗❗ ➡️ forward_values_array_shape
+
+              🍈🐇🍎 📷🐇🍎 🐍🐽 forward_values layer❗❗❗ dmse❗ ➡️ dadd
+
+              💭 Backward pass add
+              🐠🐕 🐢🐽 forward_values layer❗❗ 🐽 b layer➖1❗ dadd❗ ➡️ back_add
+              🐬 back_add❗ ➡️ db
+              🦈 back_add❗ ➡️ dmul
+
+              💭 Backward pass mul
+              🐡🐕 🐽 W layer➖1❗ 🦎🐽 forward_values layer➖1❗❗ dmul❗ ➡️  back_mul
+              🐬 back_mul❗ ➡️ dW
+              🦈 back_mul❗ ➡️ 🖍 dmse
+
+              💭 Gradient descent parameter update
+              🍓🐇🍎 🐽 b layer➖1❗ 🥝🐇🍎 db learning_rate❗❗ ➡️ 🐽 b layer➖1❗
+              🍓🐇🍎 🐽 W layer➖1❗ 🥝🐇🍎 dW learning_rate❗❗ ➡️ 🐽 W layer➖1❗
+
+           🍉
+
+         🍉
+
+         💭 Calculate loss after each epoch
+         🦖🐕 🆕🍎🆕🍨🐽 X_array 0❗🍆❗ 🆕🍎🆕🍨🐽 y_array 0❗🍆❗❗ ➡️ loss_array
+         😀🔤MSE: 🔤❗
+         📠 loss_array❗
+         😀🔤🔤❗
+      🍉
+   🍉
+
+
+   💭 Backward pass through multiply gate
+   ❗ 🐡 W🍎 X🍎 dZ🍎 ➡️ 🦑 🍇
+      🍐 W❗➡️ W_array_shape
+      🍐 X❗➡️ X_array_shape
+      🍐 dZ❗➡️ dZ_array_shape
+
+      🥐🐇🍎 🍔🐇🍎 X❗dZ❗ ➡️ dW
+      🥐🐇🍎 dZ 🍔🐇🍎 W❗❗ ➡️ dX
+
+      ↩️ 🆕🦑🆕 dW dX❗
+   🍉
+
+   💭 Backward pass through add gate
+   ❗ 🐠 X🍎 b🍎 dZ🍎 ➡️ 🦑 🍇
+      💭 Get array shapes
+      🍐 X❗ ➡️ array_shape_X
+      🍐 dZ❗ ➡️ array_shape_dZ
+
+      💭 Get array with 1's
+      🥪🐇🍎 🐽 array_shape_X 0❗ 🐽 array_shape_X 1❗❗ ➡️ one_like_X
+
+      🍈🐇🍎 dZ one_like_X❗ ➡️ dX
+      🥐🐇🍎 🥪🐇🍎 1 🐽 array_shape_dZ 0❗❗ dZ❗ ➡️ db
+
+      ↩️ 🆕🦑🆕 db dX❗
+   🍉
+
+   💭 Read data from file
+   💭 features --> scaled
+   💭 labels   --> one-hot encoded
+   💭 Returns value type with X and y
+   🐇❗ 🦋 filepath🔡  ➡️ 🦑🍇
+      🗄 🐇🍎 filepath 👍❗ ➡️ file_array
+
+      🍔🐇🍎 file_array❗ ➡️ transposed_array
+
+      🥗🐇🍎 transposed_array 🐤 🐇🍎 🐔🍏transposed_array❗❗➖1 ❗ ❗ ➡️ raw_X
+      🥗🐇🍎 transposed_array 🍨🐔🍏transposed_array❗❗➖1🍆❗ ➡️ raw_y
+
+      🍔🐇🍎 raw_X❗ ➡️ transposed_raw_X
+      🍔🐇🍎 raw_y❗ ➡️ transposed_raw_y
+
+      💭 One-hot encoding of labels
+      🔥🐇🍎 transposed_raw_y❗ ➡️ one_hot_y
+
+      💭 Scale the features
+      🥙🐇🍎 transposed_raw_X 1❗ ➡️ scaled_X
+
+      ↩️ 🆕🦑🆕 scaled_X one_hot_y❗
+   🍉
+
+   💭 Train-test-split of data
+   🐇❗ 🐅 X🍎 y🍎 train_test_ratio💯 ➡️ 🐲🍇
+      🍏X❗ ➡️ 🖍  🆕X_list
+      🍏y❗ ➡️ 🖍  🆕y_list
+
+      🆕🍨🐚🍨🐚💯🍆🍆🐸❗️ ➡️ 🖍  🆕 X_test
+      🆕🍨🐚🍨🐚💯🍆🍆🐸❗️ ➡️ 🖍  🆕 y_test
+
+      🆕🎰🆕 ❗➡️  random_generator
+
+      💭 Take round(train_test_ratio*len(X_list))
+      💭 times random samples and add them to X_test/y_test
+      🔂 i 🆕⏩⏭ 0 🏇train_test_ratio✖️💯🐔X_list❗️❗️❗️ 1❗️ 🍇
+        💭 Pick a random index between 0 and len(X_list)
+        🔢 random_generator 0 🐔X_list❗➖1❗ ➡️ test_index
+
+        💭 Add the X/y from test_index to X_test/y_test
+        🐻 X_test 🐽 X_list test_index❗❗
+        🐻 y_test 🐽 y_list test_index❗❗
+
+        💭 Remove the samples from X_list/y_list
+        🐨 X_list test_index❗️
+        🐨 y_list test_index❗️
+      🍉
+
+      ↩️ 🆕🐲🆕 🆕🍎🆕X_list❗ 🆕🍎🆕X_test❗🆕🍎🆕y_list❗🆕🍎🆕y_test❗❗
+   🍉
+
+🍉
+
+
+💭 Value type to hold values while training
+🕊 🦂 🍇
+  🖍🆕 mul 🍎
+  🖍🆕 add 🍎
+  🖍🆕 input 🍎
+
+   🆕 🍼 mul 🍎 🍼 add 🍎 🍼 input 🍎 🍇🍉
+
+   💭 Getter for 'mul'
+   ❗🐢 ➡️ 🍎 🍇
+      ↩️ mul
+    🍉
+
+   💭 Getter for 'add'
+   ❗🐍 ➡️ 🍎 🍇
+       ↩️ add
+     🍉
+
+   💭 Getter for 'input'
+    ❗🦎 ➡️ 🍎 🍇
+      ↩️ input
+    🍉
+🍉
+
+💭 Value type to hold X_train, X_test, y_train, y_test
+🕊 🐲 🍇
+  🖍🆕 X_train 🍎
+  🖍🆕 X_test 🍎
+  🖍🆕 y_train 🍎
+  🖍🆕 y_test 🍎
+
+   🆕 🍼 X_train 🍎 🍼 X_test 🍎 🍼 y_train 🍎 🍼 y_test 🍎 🍇🍉
+
+   💭 Getter for 'X_train'
+   ❗🐏 ➡️ 🍎 🍇
+      ↩️ X_train
+    🍉
+
+   💭 Getter for 'X_test'
+   ❗🐑 ➡️ 🍎 🍇
+       ↩️ X_test
+     🍉
+
+   💭 Getter for 'y_train'
+    ❗🐫 ➡️ 🍎 🍇
+      ↩️ y_train
+    🍉
+
+   💭 Getter for 'y_test'
+    ❗🐪 ➡️ 🍎 🍇
+      ↩️ y_test
+    🍉
+🍉
+
+💭 Value type two hold two arrays
+🕊 🦑 🍇
+  🖍🆕 array01 🍎
+  🖍🆕 array02 🍎
+
+   🆕 🍼 array01 🍎 🍼 array02 🍎 🍇🍉
+
+   💭 Getter for 'array01'
+   ❗🐬 ➡️ 🍎 🍇
+      ↩️ array01
+    🍉
+
+   💭 Getter for 'array02'
+   ❗🦈 ➡️ 🍎 🍇
+       ↩️ array02
+    🍉
+🍉

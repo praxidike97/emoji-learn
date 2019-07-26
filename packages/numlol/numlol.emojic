@@ -1,0 +1,583 @@
+
+💭 equivalent to np.array.
+💭 But just for 1D and 2D Arrays!
+📦 files 🏠
+
+🌍 🐇 🍎 🍇
+   💭 The array itself
+  🖍 🆕  array 🍨🐚🍨🐚💯🍆🍆
+
+  💭 The shape of the array
+  🖍 🆕  array_shape 🍨🐚🔢🍆
+
+  🆕 🍼 array 🍨🐚🍨🐚💯🍆🍆🍇
+
+     💭 Create empty list of type int
+     🆕🍨🐚🔢🍆🐸❗️ ➡️🖍 array_shape
+
+     💭 Get the number of elements in the embedded lists
+     🆕🍨🐚🔢🍆🐸❗️ ➡️🖍 🆕 num_elements_embedded_lists
+
+     💭 Get the two array dimensions
+     🐔 array❗️ ➡️ array_shape_dim01
+
+     💭 Append the number of elements of all embedded lists
+     💭 to num_elements_embedded_lists
+     🔂 element 🍡 array❗️🍇
+       🐻 num_elements_embedded_lists 🐔 element❗❗
+     🍉
+
+     💭 Check if all numbers in num_elements_embedded_lists
+     💭 are equal
+     🐽 num_elements_embedded_lists 0❗️ ➡️ array_shape_dim02
+     🐰 num_elements_embedded_lists 🍇 num_elements 🔢 ➡️ 👌 ↩️  array_shape_dim02 🙌 num_elements 🍉 ❗ ➡️ bool_list
+     🐯  bool_list 🍇 bool_element 👌 ➡️ 👌 ↩️  bool_element 🙌 👍 🍉 ❗➡️ valid_array
+
+     ↪️ valid_array 🍇
+        🐻 array_shape array_shape_dim01 ❗
+        🐻 array_shape array_shape_dim02 ❗
+     🍉
+     🙅 🍇
+        😀 🔤 Array size invalid 🔤❗
+     🍉
+
+  🍉
+
+  💭 Getter for 'array'
+  ❗🍏 ➡️  🍨🐚🍨🐚💯🍆🍆 🍇
+      ↩️ array
+   🍉
+
+   💭 Getter for 'array_shape'
+   ❗🍐 ➡️  🍨🐚🔢🍆 🍇
+      ↩️ array_shape
+    🍉
+
+   💭 Get 'array_shape'
+   ❗ 🍍 ➡️ 🔡 🍇
+
+       💭 Create empty String array
+       🆕🍨🐚🔡🍆🐸❗️ ➡️ 🖍  🆕array_shape_string
+
+       💭 Iterate over array_shape
+       🔂 i 🆕🌱🐚🔢🍆🆕 array_shape❗️🍇
+         🔡 🍺 i 10 ❗ ➡️ dim
+         🐻 array_shape_string dim ❗
+       🍉
+
+       💭 Join all elements in String array to String
+       🆕 🔡 🍨 array_shape_string 🔤,🔤 ❗ ➡️ my_string
+
+       ↩️ 🍪 🔤[🔤 my_string 🔤]🔤 🍪
+    🍉
+
+   💭 List to string
+    ❗ 🍌  list 🍨🐚💯🍆 ➡️ 🔡 🍇
+
+        💭 Create empty String array
+        🆕🍨🐚🔡🍆🐸❗️ ➡️ 🖍  🆕 list_string
+
+        💭 Iterate over array_shape
+        🔂 i 🆕🌱🐚💯🍆🆕 list❗️🍇
+          🍺 i ➡️ number
+          🐻 list_string 📰 🐇🍎 number 5❗❗
+        🍉
+
+        💭 Join all elements in String array to String
+        🆕 🔡 🍨 list_string 🔤,🔤 ❗ ➡️ my_string
+
+        💭 Add brackets to string representation
+        ↩️ 🍪 🔤[ 🔤 my_string 🔤 ]🔤 🍪
+     🍉
+
+   💭 Converts 🍨🐚⚪🍆 to 🍨🐚💯🍆
+   💭 ❗ 🥝 list 🍨🐚⚪🍆 ➡️ 🍨🐚💯🍆 🍇
+   💭   🐰 list 🍇 element ⚪ ➡️ 💯  ↩️ 🍺 🔲 element 💯  🍉 ❗ ➡️ new_list
+   💭   ↩️ new_list
+   💭 🍉
+
+    💭 Creates matrix/vector of the given size with random values
+    💭 between low and high
+    🐇 ❗ 🔮 x01🔢  x02🔢 low💯 high💯 ➡️ 🍎 🍇
+
+       💭 Create two ranges equal to the two dimensions
+       🆕 ⏩⏩ 0 x01 ❗ ➡️  range_dim_01
+       🆕 ⏩⏩ 0 x02 ❗ ➡️  range_dim_02
+
+       💭 The list to store the result of the Hadamard operation
+       🆕🍨🐚🍨🐚💯🍆🍆🐸❗️ ➡️ 🖍  🆕 return_array
+       🆕🍨🐚💯🍆🐸❗️ ➡️ 🖍  🆕 inner_array
+
+       🆕🎰🆕 ❗➡️  random_generator
+       high ➖ low  ➡️ range
+
+       🔂 dim01 🍡 range_dim_01❗️🍇
+          🔂 dim02 🍡 range_dim_02❗️🍇
+             💯 random_generator ❗➡️  random_value_raw
+             random_value_raw ✖️ range ➡️ random_value
+             random_value ➕ low ➡️ value
+             🐻 inner_array value❗
+          🍉
+          🐻 return_array inner_array ❗
+
+          🆕🍨🐚💯🍆🐸❗️ ➡️ 🖍  inner_array
+       🍉
+
+       ↩️ 🆕🍎🆕 return_array❗
+    🍉
+
+    💭 Creates matrix with 1's with the given dimensions
+    🐇❗ 🥪 dim01🔢 dim02🔢  ➡️ 🍎 🍇
+      ↩️ 🍘🐇🍎 dim01 dim02 1.0❗
+    🍉
+
+   💭 Creates matrix with 0's with the given dimensions
+   🐇❗ 🍞 dim01🔢 dim02🔢  ➡️ 🍎 🍇
+      ↩️ 🍘🐇🍎 dim01 dim02 0.0❗
+   🍉
+
+   💭 Creates matrix with constant values with the given dimensions
+   🐇❗ 🍘 dim01🔢 dim02🔢 value💯 ➡️ 🍎 🍇
+      🆕🍨🐚🍨🐚💯🍆🍆🐸❗️ ➡️ 🖍  🆕empty_array
+      🆕 ⏩⏩ 0 dim01 ❗ ➡️  range_dim_01
+
+      🔂 x01 🍡 range_dim_01❗️🍇
+         🐻 empty_array 🆕🍨🐚💯🍆🦊 value dim02❗️❗
+      🍉
+      ↩️ 🆕🍎🆕 empty_array❗
+   🍉
+
+   💭 Sets the element at dim01 dim02 to given value
+   🐇 ❗ 🌭 dim01🔢 dim02🔢 value💯 arr🍎 ➡️ 🍎 🍇
+      🍏 arr❗ ➡️🖍  🆕array
+      🐽 array dim01❗ ➡️ 🖍  🆕inner_array
+      value ➡️ 🐽 inner_array dim02❗
+      inner_array ➡️ 🐽 array dim01❗
+
+      ↩️ 🆕🍎🆕 array❗
+   🍉
+
+   💭 Return the maximum element in array
+   🐇❗ 🍕 arr🍎 ➡️ 💯 🍇
+
+      🍏 arr❗ ➡️ array
+      🍐 arr❗ ➡️ array_shape
+
+      🐽 🐽  array 0 ❗ 0 ❗ ➡️ 🖍  🆕value_max
+
+      🆕 ⏩⏩ 0 🐽 array_shape 0❗ ❗ ➡️  range_dim_01
+      🆕 ⏩⏩ 0 🐽 array_shape 1❗ ❗ ➡️  range_dim_02
+
+      🔂 dim01 🍡 range_dim_01❗️🍇
+         🔂 dim02 🍡 range_dim_02❗️🍇
+            ↪️ 🐽 🐽  array dim01 ❗ dim02 ❗ ▶ value_max 🍇
+               🐽 🐽  array dim01 ❗ dim02 ❗ ➡️ 🖍  value_max
+            🍉
+         🍉
+      🍉
+
+      ↩️  value_max
+   🍉
+
+   💭 Prints all elements in 'array'
+   ❗ 📠  🍇
+       💭 Iterate over all elements in 'array'
+       💭 and use 🍌 method to print them
+       🔂 element 🍡 array❗️🍇
+         🍌🐕 element❗ ➡️ string_list
+         😀 string_list ❗
+       🍉
+    🍉
+
+   💭 Transforms real number to string
+   💭 (because the emojicode method is broken)
+   🐇❗ 📰  number💯 precision🔢 ➡️ 🔡 🍇
+       ↪️ number ▶🙌 0.0 🍇
+          ↩️ 🔡 number precision❗
+       🍉
+       🙅🍇
+          ↩️ 🍪 🔤-🔤 🔡 🏧number❗ precision❗ 🍪
+       🍉
+    🍉
+
+    💭 Creates a new array, but only with all the
+    💭 rows specified in 'rows'
+    🐇❗🥗 arr🍎 rows 🍨🐚🔢🍆 ➡️ 🍎 🍇
+       🍏 arr❗ ➡️ array
+       🍐 arr❗ ➡️ array_shape
+
+       🆕 ⏩⏩ 0 🐔 array❗ ❗➡️  range_rows
+
+       🆕🍨🐚🍨🐚💯🍆🍆🐸❗️ ➡️ 🖍  🆕 new_array
+
+       🔂 row_index 🍡 range_rows❗️🍇
+          ↪️ 🐦 rows row_index❓🍇
+             🐻 new_array 🐽 array row_index❗❗
+          🍉
+       🍉
+       ↩️ 🆕🍎🆕 new_array❗
+    🍉
+
+    💭 Get number-th element of array
+    🐇❗🥫 arr🍎 number🔢 ➡️ 🍎 🍇
+       ↩️ 🆕🍎🆕 🍨🐽 🍏arr❗number❗🍆❗
+    🍉
+
+   💭 Implements 'reduce' for real numbers
+   🐇❗ 🐧 list🍨🐚💯🍆️  callable 🍇💯 💯➡️💯🍉 ➡️ 💯 🍇
+      list ➡️🖍  🆕my_list
+
+      🐽my_list 0❗️ ➡️🖍  🆕accumulator
+      🐨my_list 0❗️
+
+      🔂 element 🍡my_list❗ 🍇
+         ⁉️ callable accumulator element❗ ➡️🖍 accumulator
+      🍉
+
+      ↩️ accumulator
+   🍉
+
+   💭 Calculates sum of elements in list
+   🐇❗ 🐱 list🍨🐚💯🍆 ➡️ 💯 🍇
+      ↩️ 🐧🐕 list 🍇 number01💯 number02💯 ➡️ 💯 ↩️  number01 ➕ number02 🍉❗
+   🍉
+
+   💭 Reverse list
+   🐇❗ 🐮 list🍨🐚🔢🍆 ➡️ 🍨🐚🔢🍆 🍇
+      🆕🍨🐚🔢🍆🦊 0 🐔 list❗️❗️ ➡️🖍 🆕 new_list
+      🆕 ⏩⏩ 0 🐔 list❗️ ❗ ➡️  range_list
+
+      🔂 i 🍡 range_list❗️🍇
+         🐽 list i❗➡️ 🐽 new_list 🐔 list❗️➖1➖i❗
+      🍉
+      ↩️ new_list
+   🍉
+
+   💭 Creates list [0,1,2,...,list_size-1]
+   🐇❗ 🐤 list_size 🔢 ➡️ 🍨🐚🔢🍆 🍇
+      🆕🍨🐚🔢🍆🐸❗️ ➡️ 🖍  🆕 list
+
+      🆕 ⏩⏩ 0 list_size ❗ ➡️  range_list
+      🔂 i 🍡 range_list❗️🍇
+         🐻 list i❗
+      🍉
+      ↩️ list
+   🍉
+
+   💭 Returns the index of the maximum element
+   🐇❗ 🐶 list 🍨🐚💯🍆 ➡️ 🔢🍇
+      0 ➡️ 🖍  🆕 max_index
+      🔂 i 🆕 ⏩⏩ 0 🐔list ❗❗🍇
+         ↪️ 🐽 list i❗ ▶ 🐽 list max_index❗ 🍇
+           i ➡️ 🖍 max_index
+         🍉
+      🍉
+      ↩️ max_index
+   🍉
+
+   💭 Read vector/matrix from file
+   💭 If header is true the first line is skipped
+   🐇❗ 🗄 filePath🔡  header👌 ➡️ 🍎 🍇
+      💭 Check if file exists
+      ↪️ 📜 🕊📑 filePath❗ 🍇
+         💭 The new list where all read values are stores
+         🆕🍨🐚🍨🐚💯🍆🍆🐸❗️ ➡️🖍 🆕 file_array
+
+         💭 Get length of file
+         🍺📏 🕊📑 filePath ❗ ➡️ length_file
+
+         💭 Read the whole file into a string
+         🍺🆕📄📜 filePath❗️ ➡️ readFile
+         🍺🔡 🍺📓readFile length_file❗️❗️➡️ file_string
+
+         💭 Split at 'new line'
+         🔫  file_string 🔤❌n🔤 ❗➡️ 🖍 🆕splitted_string_rows
+         🐼 splitted_string_rows❗
+
+         ↪️ header 🍇
+            🐨 splitted_string_rows 0❗
+         🍉
+
+         💭 Iterate over the splitted array
+         🔂 element 🆕🌱🐚🔡🍆🆕 splitted_string_rows❗️🍇
+            🔫  🍺element 🔤,🔤 ❗➡️ splitted_string_line
+            💭 Remove whitespaces from element and cast it to number
+            🐰 splitted_string_line 🍇 string_value 🔡 ➡️ 💯 ↩️  🍺💯 🔧string_value❗❗ 🍉 ❗ ➡️ splitted_string_line_number
+            🐻 file_array splitted_string_line_number❗
+         🍉
+
+         ↩️ 🆕🍎🆕 file_array❗
+
+      🍉
+      🙅 🍇
+         😀 🔤File does not exist or cannot be read!🔤❗️
+         ↩️ 🍞  🐇🍎 1 1❗
+      🍉
+   🍉
+
+   💭 Does element-wise operations of two matrixes/vectors.
+   💭 The operation is defined in the callable.
+   🐇 ❗ 🍑 arr01🍎  arr02🍎  callable 🍇💯💯➡️💯🍉 ➡️ 🍎 🍇
+      🍏 arr01❗ ➡️ array01
+      🍏 arr02❗ ➡️ array02
+
+      🍐 arr01❗ ➡️ array_shape01
+      🍐 arr02❗ ➡️ array_shape02
+
+      💭 Return error in case the shapes of the two arrays are not equal
+      ↪️ ❎ 🐽 array_shape02 0❗ 🙌  🐽 array_shape01 0❗❗👐  ❎ 🐽 array_shape02 1❗ 🙌  🐽 array_shape01 1❗❗ 🍇
+        💭 🚨 🆕🚧🆕 🔤 Array shapes do not match!🔤❗️
+        😀 🔤 Wrong array shapes!🔤 ❗
+      🍉
+
+      💭 Create two ranges equal to the two dimensions
+      🆕 ⏩⏩ 0 🐽 array_shape02 0❗ ❗ ➡️  range_dim_01
+      🆕 ⏩⏩ 0 🐽 array_shape02 1❗ ❗ ➡️  range_dim_02
+
+      💭 The list to store the result of the operation
+      🆕🍨🐚🍨🐚💯🍆🍆🐸❗️ ➡️ 🖍  🆕 return_array
+      🆕🍨🐚💯🍆🐸❗️ ➡️ 🖍  🆕 inner_array
+
+      🔂 dim01 🍡 range_dim_01❗️🍇
+         🔂 dim02 🍡 range_dim_02❗️🍇
+            ⁉️ callable 🐽 🐽  array01 dim01 ❗ dim02 ❗  🐽 🐽  array02 dim01 ❗ dim02 ❗ ❗➡️  product
+            🐻 inner_array product ❗
+         🍉
+         🐻 return_array inner_array ❗
+         🆕🍨🐚💯🍆🐸❗️ ➡️ 🖍  inner_array
+      🍉
+
+      ↩️ 🆕🍎🆕 return_array❗
+   🍉
+
+   💭 Does vector-matrix/matrix-matrix multiplication
+   🐇 ❗ 🥐 arr01🍎  arr02🍎 ➡️ 🍎 🍇
+      🍏 arr01❗ ➡️ array01
+      🍏 arr02❗ ➡️ array02
+
+      🍐 arr01❗ ➡️ array_shape01
+      🍐 arr02❗ ➡️ array_shape02
+
+      💭 Return error in case the shapes of the two arrays are not equal
+      ↪️ ❎ 🐽 array_shape01 1❗ 🙌  🐽 array_shape02 0❗❗ 🍇
+        💭 🚨 🆕🚧🆕 🔤 Array shapes do not match!🔤❗️
+        😀 🔤 Wrong array shapes!🔤 ❗
+
+        😀 🔡 🐽 array_shape01 0❗10❗❗
+        😀 🔡 🐽 array_shape01 1❗10❗❗
+        😀 🔡 🐽 array_shape02 0❗10❗❗
+        😀 🔡 🐽 array_shape02 1❗10❗❗
+      🍉
+
+      💭 Create two ranges equal to the two dimensions
+      🆕 ⏩⏩ 0 🐽 array_shape01 0❗ ❗ ➡️  range_dim_01
+      🆕 ⏩⏩ 0 🐽 array_shape02 1❗ ❗ ➡️  range_dim_02
+
+      💭 The list to store the result of the operation
+      🍞 🐇🍎 🐽 array_shape01 0❗ 🐽 array_shape02 1❗❗ ➡️ return_arr
+      🍏 return_arr❗ ➡️ 🖍 🆕return_array
+
+      🔂 i 🍡 range_dim_01❗️🍇
+         🔂 j 🍡 range_dim_02❗️🍇
+            🆕 ⏩⏩ 0 🐽 array_shape02 0❗❗ ➡️  range_dim_03
+            🔂 k 🍡 range_dim_03❗️🍇
+               🐽 🐽 array01 i❗ k❗✖️ 🐽 🐽 array02 k❗ j❗ ➡️ value
+               🐽 🐽 return_array i❗ j❗ ➕ value ➡️ 🐽 🐽 return_array i❗ j❗
+            🍉
+         🍉
+      🍉
+
+      ↩️ 🆕🍎🆕 return_array❗
+   🍉
+
+
+   💭 Does element-wise operations of one matrix/vector.
+   💭 The operation is defined in the callable.
+   🐇 ❗ 🍒 arr🍎  callable 🍇💯➡️💯🍉 ➡️ 🍎 🍇
+      🍏 arr❗ ➡️ array
+      🍐 arr❗ ➡️ array_shape
+
+      💭 Create two ranges equal to the two dimensions
+      🆕 ⏩⏩ 0 🐽 array_shape 0❗ ❗ ➡️  range_dim_01
+      🆕 ⏩⏩ 0 🐽 array_shape 1❗ ❗ ➡️  range_dim_02
+
+      💭 The list to store the result of the Hadamard operation
+      🆕🍨🐚🍨🐚💯🍆🍆🐸❗️ ➡️ 🖍  🆕 return_array
+      🆕🍨🐚💯🍆🐸❗️ ➡️ 🖍  🆕 inner_array
+
+      🔂 dim01 🍡 range_dim_01❗️🍇
+         🔂 dim02 🍡 range_dim_02❗️🍇
+            ⁉️ callable 🐽 🐽  array dim01 ❗ dim02 ❗ ❗➡️  product
+            🐻 inner_array product ❗
+         🍉
+         🐻 return_array inner_array ❗
+         🆕🍨🐚💯🍆🐸❗️ ➡️ 🖍  inner_array
+      🍉
+
+      ↩️ 🆕🍎🆕 return_array❗
+   🍉
+
+   💭 Return transposed matrix/vector
+   🐇 ❗🍔 arr🍎 ➡️ 🍎 🍇
+      🍏 arr❗ ➡️ array
+      🍐 arr❗ ➡️ array_shape
+
+      🆕 ⏩⏩ 0 🐽 array_shape 0❗ ❗ ➡️  range_dim_01
+      🆕 ⏩⏩ 0 🐽 array_shape 1❗ ❗ ➡️  range_dim_02
+
+      🍞 🐇🍎 🐽 array_shape 1❗ 🐽 array_shape 0❗❗ ➡️ return_arr
+      🍏 return_arr❗ ➡️ 🖍 🆕return_array
+
+      🔂 i 🍡 range_dim_01❗️🍇
+         🔂 j 🍡 range_dim_02❗️🍇
+            🐽 🐽 array i❗ j❗ ➡️ 🐽 🐽 return_array j❗ i❗
+         🍉
+      🍉
+
+      ↩️ 🆕🍎🆕 return_array❗
+   🍉
+
+   💭 One-Hot encoding of vector
+   🐇 ❗🔥 arr🍎 ➡️ 🍎 🍇
+      🍏 arr❗ ➡️ array
+      🍐 arr❗ ➡️ array_shape
+
+      🆕🍨🐚🍨🐚💯🍆🍆 🐸❗ ➡️ 🖍 🆕one_hot_array
+      🍕🐕 arr❗ ➡️ max_value
+
+      💭 Just *vectors* can be one hot encoded!
+      ↪️ ❎ 🐽 array_shape 1❗ 🙌  1❗ 🍇
+        💭 🚨 🆕🚧🆕 🔤 Array shapes do not match!🔤❗️
+        😀 🔤 Wrong array shape! Just *vectors* can be one hot encoded! 🔤 ❗
+      🍉
+
+      🆕 ⏩⏩ 0 🐽 array_shape 0❗ ❗ ➡️  range_dim_01
+      🔂 i 🍡 range_dim_01❗️🍇
+         🐽 🐽  array i ❗ 0 ❗ ➡️  value
+         🌭🐕 0 🏇value❗ 1.0 🍞🐕 1 🏇max_value❗➕1❗❗ ➡️ encoded
+         🐻 one_hot_array 🐽 🍏encoded❗ 0❗ ❗
+      🍉
+
+      ↩️ 🆕🍎🆕 one_hot_array❗
+   🍉
+
+   💭 Normalizes data in array
+   🐇 ❗🥙 arr🍎 axis🔢 ➡️ 🍎 🍇
+      🆕🍨🐚🍨🐚💯🍆🍆 🐸❗ ➡️ 🖍 🆕array
+      🆕🍨🐚🔢🍆 🐸❗ ➡️ 🖍 🆕array_shape
+
+      🆕🍨🐚🍨🐚💯🍆🍆 🐸❗ ➡️ 🖍 🆕normalised_array
+
+      💭 If array should be normalised along 1 axis
+      💭 transpose the array first to make things easier
+      ↪️ axis 🙌 1 🍇
+         🍏 🍔🐕 arr❗❗ ➡️🖍 array
+         🍐 🍔🐕 arr❗❗ ➡️🖍 array_shape
+      🍉
+      🙅‍‍ 🍇
+        🍏 arr❗ ➡️🖍 array
+        🍐 arr❗ ➡️🖍 array_shape
+      🍉
+
+      🔂 list 🍡 array❗️🍇
+         💭 Calculate the mean of every row
+         🐱🐕 list❗ ➡️ sum
+         sum ➗ 💯🐔 list❗❗ ➡️ mean
+
+         💭 Calculate the deviation
+         0.0 ➡️🖍 🆕summed_mse
+         🔂 element 🍡 list❗️🍇
+            summed_mse ➕ 🏂 element➖mean 2❗️ ➡️🖍 summed_mse
+         🍉
+         summed_mse ➗ 💯🐔 list❗❗ ➡️ variance
+         ⛷variance❗️ ➡️ deviation
+
+         💭 Normalise array
+         🆕🍎🆕 🍨list🍆❗ ➡️ list_array
+         🍊🐕 🍠🐕 list_array mean❗deviation❗ ➡️ normalised_list_array
+
+         🐻 normalised_array 🐽 🍏normalised_list_array❗ 0❗ ❗
+      🍉
+
+      🆕🍎🆕 normalised_array❗ ➡️🖍 🆕return_array
+      ↪️ axis 🙌 1 🍇
+         🍔🐕 return_array❗ ➡️🖍 return_array
+      🍉
+
+      ↩️ return_array
+   🍉
+
+   💭 Element-wise multiplication of two matrixes/vectors (Hadamard product)
+   🐇 ❗🍈 arr01🍎  arr02🍎 ➡️ 🍎 🍇
+      ↩️ 🍑 🐇🍎 arr01 arr02 🍇 number01💯 number02💯 ➡️ 💯 ↩️ number01✖️ number02 🍉 ❗
+   🍉
+
+   💭 Element-wise addition of two matrixes/vectors
+   🐇 ❗🍋 arr01🍎  arr02🍎 ➡️ 🍎 🍇
+       ↩️ 🍑 🐇🍎 arr01 arr02 🍇 number01💯 number02💯 ➡️ 💯 ↩️ number01➕ number02 🍉 ❗
+   🍉
+
+   💭 Element-wise subtraction of two matrixes/vectors
+   🐇 ❗🍓 arr01🍎  arr02🍎 ➡️ 🍎 🍇
+       ↩️ 🍑 🐇🍎 arr01 arr02 🍇 number01💯 number02💯 ➡️ 💯 ↩️ number01➖ number02 🍉 ❗
+   🍉
+
+   💭 Element-wise addition of constant value
+   🐇 ❗🥦 array🍎 constant💯 ➡️ 🍎 🍇
+      ↩️ 🍒 🐇🍎 array 🍇 number💯  ➡️ 💯 ↩️ number➕ constant 🍉 ❗
+   🍉
+
+   💭 Element-wise substraction of constant value
+   🐇 ❗🍠 array🍎 constant💯 ➡️ 🍎 🍇
+      ↩️ 🍒 🐇🍎 array 🍇 number💯  ➡️ 💯 ↩️ number➖ constant 🍉 ❗
+   🍉
+
+   💭 Element-wise multiplication of constant value
+   🐇 ❗🥝 array🍎 constant💯 ➡️ 🍎 🍇
+      ↩️ 🍒 🐇🍎 array 🍇 number💯  ➡️ 💯 ↩️ number✖️ constant 🍉 ❗
+   🍉
+
+   💭 Element-wise division of constant value
+   🐇 ❗🍊 array🍎 constant💯 ➡️ 🍎 🍇
+      ↩️ 🍒 🐇🍎 array 🍇 number💯  ➡️ 💯 ↩️ number➗ constant 🍉 ❗
+   🍉
+
+   💭 Base to the power of all elements in matrix/vector
+   🐇 ❗🥒 array🍎 base💯 ➡️ 🍎 🍇
+      ↩️ 🍒 🐇🍎 array 🍇 number💯  ➡️ 💯 ↩️ 🏂 base number❗ 🍉 ❗
+   🍉
+
+   💭 All elements in matrix/vector to the power of exponent
+   🐇 ❗🥕 array🍎 exponent💯 ➡️ 🍎 🍇
+      ↩️ 🍒 🐇🍎 array 🍇 number💯  ➡️ 💯 ↩️ 🏂 number exponent❗ 🍉 ❗
+   🍉
+
+   💭 Divide constant by all elements in matrix/vector
+   🐇 ❗🌽 array🍎 constant💯 ➡️ 🍎 🍇
+      ↩️ 🍒 🐇🍎 array 🍇 number💯  ➡️ 💯 ↩️  constant ➗ number 🍉 ❗
+   🍉
+
+   💭 The MSE function
+   🐇 ❗👬 output🍎 target🍎 ➡️ 🍎 🍇
+      ↩️ 🥝🐕 🥕🐕 🍓🐕 output target❗ 2.0❗ 0.5❗
+   🍉
+
+   💭 The derivative of the MSE function
+   🐇 ❗👭 output🍎 target🍎 ➡️ 🍎 🍇
+      ↩️ 🍓🐕 output target❗
+   🍉
+
+   💭 The logistic activation function
+   🐇 ❗📸 output🍎 ➡️ 🍎 🍇
+      🥝🐕 output 🔋1.0❗❗ ➡️ negative_output
+      ↩️ 🌽🐕 🥦🐕 🥒 🐕 negative_output 🛎 🕊💯❗❗ 1.0❗1.0❗
+   🍉
+
+   💭 The derivative of the logistic activation function
+   🐇 ❗📷 output🍎 ➡️ 🍎 🍇
+      📸🐕 output❗ ➡️ logistic_array
+      🥦🐕 🥝🐕 logistic_array 🔋1.0❗❗ 1.0❗ ➡️ value
+      ↩️ 🍈🐕 logistic_array value❗
+   🍉
+
+🍉

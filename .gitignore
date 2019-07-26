@@ -1,0 +1,5 @@
+*.o
+*.a
+interface*
+test
+.DS_Store
