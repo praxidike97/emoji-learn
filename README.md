@@ -178,6 +178,6 @@ So, how does an Emojicode net performs on different datasets? I made a 10 fold c
 X | Iris dataset | Sonar dataset | Pima Indian diabetes dataset
 --- | --- | --- | ---
 Train | 0.966 +/- 0.011 | 0.9986 +/- 0.0030 | 0.833 +/- 0.015
-Test | 0.98 +/- 0.023 | 0.784 +/- 0.029 | 0.746 +/- 0.026
+Test | 0.980 +/- 0.023 | 0.784 +/- 0.029 | 0.746 +/- 0.026
 
 Wow, not too bad!
