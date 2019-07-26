@@ -128,21 +128,16 @@
            🔂 layer 🍡 layers_reversed❗️🍇
               💭 Derivative of activation function
               🍐📷🐇🍎 dmse❗❗➡️ dmse_array_shape
-
               🍐 🐍🐽 forward_values layer❗❗❗ ➡️ forward_values_array_shape
-
               🍈🐇🍎 📷🐇🍎 🐍🐽 forward_values layer❗❗❗ dmse❗ ➡️ dadd
-
               💭 Backward pass add
               🐠🐕 🐢🐽 forward_values layer❗❗ 🐽 b layer➖1❗ dadd❗ ➡️ back_add
               🐬 back_add❗ ➡️ db
               🦈 back_add❗ ➡️ dmul
-
               💭 Backward pass mul
               🐡🐕 🐽 W layer➖1❗ 🦎🐽 forward_values layer➖1❗❗ dmul❗ ➡️  back_mul
               🐬 back_mul❗ ➡️ dW
               🦈 back_mul❗ ➡️ 🖍 dmse
-
               💭 Gradient descent parameter update
               🍓🐇🍎 🐽 b layer➖1❗ 🥝🐇🍎 db learning_rate❗❗ ➡️ 🐽 b layer➖1❗
               🍓🐇🍎 🐽 W layer➖1❗ 🥝🐇🍎 dW learning_rate❗❗ ➡️ 🐽 W layer➖1❗
