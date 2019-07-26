@@ -6,3 +6,4 @@ emoji-learns is a simple library to create neural networks - in [Emojicode](http
 How can this not be awesome??
 
 ## Prerequisites
+n/a
