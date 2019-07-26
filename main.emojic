@@ -6,7 +6,8 @@
   💭 Create classifier for Iris dataset
 
   😀 🔤Train-test-split🔤 ❗
-  🦋🐇🕸 🔤datasets/iris.csv🔤❗ ➡️ data
+  💭🦋🐇🕸 🔤datasets/iris.csv🔤❗ ➡️ data
+  🚢🐇🕸 ❗ ➡️ data
   🐬 data❗ ➡️ X
   🦈 data❗ ➡️ y
 
@@ -18,32 +19,32 @@
 
   😀 🔤 -----------------------------🔤 ❗
 
-  🆕🕸🆕 🍨 4 8 3🍆 ❗➡️ neural_net_iris
+  🆕🕸🆕 🍨 60 12 2🍆 ❗➡️ neural_net
 
   😀 🔤 Train the neural net:🔤 ❗
-  🦄 neural_net_iris X_train y_train 100 0.1❗
+  🦄 neural_net X_train y_train 100 0.1❗
   😀 🔤 -----------------------------🔤 ❗
 
   😀 🔤 Calculate accuracy:🔤 ❗
-  🦍 neural_net_iris X_train y_train❗ ➡️ accuracy_train
+  🦍 neural_net X_train y_train❗ ➡️ accuracy_train
   😀🍪 🔤Accuracy training data: 🔤 🔡accuracy_train✖️100 2❗🔤%🔤 🍪❗
 
-  🦍 neural_net_iris X_test y_test❗ ➡️ accuracy_test
+  🦍 neural_net X_test y_test❗ ➡️ accuracy_test
   😀🍪 🔤Accuracy test data: 🔤 🔡accuracy_test✖️100 2❗🔤%🔤 🍪❗
   😀 🔤 -----------------------------🔤 ❗
 
 
   💭 Make predictions
   😀 🔤 Prediction sample class 0:🔤 ❗
-  📠 🦕 neural_net_iris 🥫🐇🍎 X 0❗❗❗
+  📠 🦕 neural_net 🥫🐇🍎 X 0❗❗❗
   😀 🔤 -----------------------------🔤 ❗
 
   😀 🔤 Prediction sample class 1:🔤 ❗
-  📠 🦕 neural_net_iris 🥫🐇🍎 X 78❗❗❗
+  📠 🦕 neural_net 🥫🐇🍎 X 78❗❗❗
   😀 🔤 -----------------------------🔤 ❗
 
   😀 🔤 Prediction sample class 2:🔤 ❗
-  📠 🦕 neural_net_iris 🥫🐇🍎 X 141❗❗❗
+  📠 🦕 neural_net 🥫🐇🍎 X 141❗❗❗
   😀 🔤 -----------------------------🔤 ❗
 
 🍉

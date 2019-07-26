@@ -141,7 +141,6 @@
               💭 Gradient descent parameter update
               🍓🐇🍎 🐽 b layer➖1❗ 🥝🐇🍎 db learning_rate❗❗ ➡️ 🐽 b layer➖1❗
               🍓🐇🍎 🐽 W layer➖1❗ 🥝🐇🍎 dW learning_rate❗❗ ➡️ 🐽 W layer➖1❗
-
            🍉
 
          🍉
@@ -204,6 +203,26 @@
       🥙🐇🍎 transposed_raw_X 1❗ ➡️ scaled_X
 
       ↩️ 🆕🦑🆕 scaled_X one_hot_y❗
+   🍉
+
+   💭 Load the iris dataset
+   🐇❗🌺 ➡️ 🦑🍇
+      ↩️ 🦋🐇🕸 🔤datasets/iris.csv🔤❗
+   🍉
+
+   💭 Load the Pima Indian diabetes dataset
+   🐇❗🛶 ➡️ 🦑🍇
+      ↩️ 🦋🐇🕸 🔤datasets/pima-indians-diabetes.csv🔤❗
+   🍉
+
+   💭 Load the banknote dataset
+   🐇❗💶 ➡️ 🦑🍇
+      ↩️ 🦋🐇🕸 🔤datasets/banknotes.csv🔤❗
+   🍉
+
+   💭 Load the sonar dataset
+   🐇❗🚢 ➡️ 🦑🍇
+      ↩️ 🦋🐇🕸 🔤datasets/sonar.csv🔤❗
    🍉
 
    💭 Train-test-split of data
