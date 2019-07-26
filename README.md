@@ -5,10 +5,10 @@
 emoji-learns is a simple library to create neural networks - in [Emojicode](https://www.emojicode.org)!  
 How can this not be awesome??
 
-## Motivation
+## Motivation 💪🏼
 n/a
 
-## Look and Feel
+## Look and Feel 👀
 So...how does machine learning in Emojicode actually look like?? Here are some screenshots to save you an extra click to my GitHub repo:
 
 ![Screenshot 1](images/screenshot01.png)
@@ -172,7 +172,7 @@ This method can then be used to make predictions.
 📠 🦕 neural_net 🥫🐇🍎 X 3❗❗❗
 ```
 
-## Performance
+## Performance 📈
 So, how does an Emojicode net performs on different datasets? I made a 10 fold crossvalidation training each net over 100 epochs, and here are the results (accuracies):
 
 X | Iris dataset | Sonar dataset | Pima Indian diabetes dataset
