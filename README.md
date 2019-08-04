@@ -6,7 +6,7 @@ emoji-learns is a simple library to create neural networks - in [Emojicode](http
 How can this not be awesome??
 
 ## Motivation 💪🏼
-n/a
+![Screenshot 5](images/screenshot05.png)
 
 ## Look and Feel 👀
 So...how does machine learning in Emojicode actually look like?? Here are some screenshots to save you an extra click to my GitHub repo:
